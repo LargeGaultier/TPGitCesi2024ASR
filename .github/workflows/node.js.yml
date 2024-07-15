@@ -30,7 +30,7 @@ jobs:
     - run: npm i --force
     - run: npm run build --if-present
     - name: GitGuardian Shield Action       
-      uses: GitGuardian/ggshield-action@v1.27.0
+      uses: GitGuardian/ggshield-action@v1.29.0
       with : 
         fetch-depth: 0 # fetch all history so multiple commits can be scanned
       env:
