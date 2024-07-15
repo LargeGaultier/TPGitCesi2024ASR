@@ -30,7 +30,9 @@ jobs:
     - run: npm i --force
     - run: npm run build --if-present
     - name: GitGuardian Shield Action       
-      uses: GitGuardian/ggshield-action@v1.27.0          
+      uses: GitGuardian/ggshield-action@v1.27.0
+      env:
+          GITGUARDIAN_API_KEY: ${{ secrets.GITGUARDIAN_API_KEY }}
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4.3.4
       with:
